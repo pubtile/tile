@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - InsertInstruction测试</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>InsertInstruction测试</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.pubtile.foundation.invfortesting.html">com.pubtile.foundation.invfortesting</a> &gt; InsertInstructionTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">6</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">1.519s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">所有必须值都含有，并且与数据库唯独不重复-成功</td>
+<td class="success">allRequiredProperty_success()</td>
+<td class="success">0.034s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">数据库不可为空-失败数据库异常</td>
+<td class="success">dbNullableCheck_fail()</td>
+<td class="success">0.131s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">维度重复-失败</td>
+<td class="success">dimensionExist_fail()</td>
+<td class="success">0.038s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">包含自动生成的值-也成功</td>
+<td class="success">withAutoGenerateProperty_success()</td>
+<td class="success">0.044s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">bankable维度维度属性为空-成功</td>
+<td class="success">withBankablePropertySetToNull_success()</td>
+<td class="success">1.263s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">维度不全-失败</td>
+<td class="success">withoutRequiredProperty_fail()</td>
+<td class="success">0.009s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>15:40:03.929 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+15:40:03.964 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+15:40:04.055 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.pubtile.foundation.invfortesting.InsertInstructionTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+15:40:04.079 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.pubtile.foundation.invfortesting.InsertInstructionTest], using SpringBootContextLoader
+15:40:04.086 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.pubtile.foundation.invfortesting.InsertInstructionTest]: class path resource [com/pubtile/foundation/invfortesting/InsertInstructionTest-context.xml] does not exist
+15:40:04.086 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.pubtile.foundation.invfortesting.InsertInstructionTest]: class path resource [com/pubtile/foundation/invfortesting/InsertInstructionTestContext.groovy] does not exist
+15:40:04.086 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.pubtile.foundation.invfortesting.InsertInstructionTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+15:40:04.162 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.pubtile.foundation.invfortesting.InsertInstructionTest]
+15:40:04.417 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.pubtile.foundation.invfortesting.InsertInstructionTest]: using defaults.
+15:40:04.418 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+15:40:04.437 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [javax/servlet/ServletContext]
+15:40:04.453 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@18ce52d1, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@4f155997, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3b92270a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5ca87801, org.springframework.test.context.support.DirtiesContextTestExecutionListener@361ae19f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@53a6df2a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@79a60823, org.springframework.test.context.event.EventPublishingTestExecutionListener@66510f66, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7a60c2a, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@629ccc7b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2bb2271b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@45763734, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@7206b4ec, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@76fd51c3]
+15:40:04.460 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@4ea7b0f testClass = InsertInstructionTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1d67ff4b testClass = InsertInstructionTest, locations = '{}', classes = '{class com.pubtile.foundation.invfortesting.app.InvForTestingApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@53069f70, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@51464f9, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@456fe7f1, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@753e0dc2, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@471791db, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@1a0d52b3], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null].
+15:40:04.483 [Test worker] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@4ea7b0f testClass = InsertInstructionTest, testInstance = com.pubtile.foundation.invfortesting.InsertInstructionTest@40430eab, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1d67ff4b testClass = InsertInstructionTest, locations = '{}', classes = '{class com.pubtile.foundation.invfortesting.app.InvForTestingApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@53069f70, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@51464f9, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@456fe7f1, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@753e0dc2, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@471791db, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@1a0d52b3], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]].
+15:40:04.536 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.5.0)
+
+c.p.f.i.InsertInstructionTest: Starting InsertInstructionTest using Java 1.8.0_201 on server with PID 65281 (started by jiayan in /work/workspace-pubtile/pubtile-wms-all/pubtile-foundation)
+c.p.f.i.InsertInstructionTest: Running with Spring Boot v2.5.0, Spring v5.3.13
+c.p.f.i.InsertInstructionTest: No active profile set, falling back to default profiles: default
+o.m.s.m.ClassPathMapperScanner: Skipping MapperFactoryBean with name 'invForTesting2Mapper' and 'com.pubtile.foundation.invfortesting.infrastructure.mybatis.mapper.InvForTesting2Mapper' mapperInterface. Bean already defined with the same name!
+o.m.s.m.ClassPathMapperScanner: Skipping MapperFactoryBean with name 'invForTestingMapper' and 'com.pubtile.foundation.invfortesting.infrastructure.mybatis.mapper.InvForTestingMapper' mapperInterface. Bean already defined with the same name!
+o.m.s.m.ClassPathMapperScanner: No MyBatis mapper was found in '[com.pubtile.foundation.**.mybatis.mapper, com.pubtile.bc.**.mybatis.mapper]' package. Please check your configuration.
+ _ _   |_  _ _|_. ___ _ |    _ 
+| | |\/|_)(_| | |_\  |_)||_|_\ 
+     /               |         
+                        3.4.3 
+c.p.f.i.InsertInstructionTest: Started InsertInstructionTest in 2.893 seconds (JVM running for 5.1)
+c.p.f.d.m.ModelMetaManager: dimension for identify and update is uniqueCode
+c.p.f.d.m.ModelMetaManager: multiple dimensions for identify are found ,but expect 1, please check the request。dimensions are uniqueCode,inventoryDimension
+c.p.f.d.i.i.BaseInsertInstruction: duplicate dimension check, dimension: inventoryDimension, parameter:{tenant_id=1, location_code=SH1XX, owner_code=owner1, sku_id=SKU2, unique_code=XXX}
+c.p.f.i.i.m.m.I.selectCountByMap: ==&gt;  Preparing: SELECT COUNT(*) FROM InvForTesting WHERE tenant_id = ? AND location_code = ? AND owner_code = ? AND sku_id = ? AND unique_code = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectCountByMap: ==&gt; Parameters: 1(Long), SH1XX(String), owner1(String), SKU2(String), XXX(String)
+c.p.f.i.i.m.m.I.selectCountByMap: &lt;==      Total: 1
+c.p.f.d.i.i.BaseInsertInstruction: duplicate dimension check, dimension: uniqueCode, parameter:{tenant_id=1, unique_code=XXX}
+c.p.f.i.i.m.m.I.selectCountByMap: ==&gt;  Preparing: SELECT COUNT(*) FROM InvForTesting WHERE tenant_id = ? AND unique_code = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectCountByMap: ==&gt; Parameters: 1(Long), XXX(String)
+c.p.f.i.i.m.m.I.selectCountByMap: &lt;==      Total: 1
+c.p.f.i.i.m.m.I.insert: ==&gt;  Preparing: INSERT INTO InvForTesting (id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, updated_by, revision) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+c.p.f.i.i.m.m.I.insert: ==&gt; Parameters: 1480081943737569281(Long), 2022-01-09T15:40:08.627(String), SKU2(String), (String), XXX(String), owner1(String), 1(Integer), SH1XX(String), vendor1(String), CGRK(String), 1(Long), 89(Long), 89(Long), 1(Long)
+c.p.f.i.i.m.m.I.insert: &lt;==    Updates: 1
+c.p.f.i.i.m.m.I.selectById: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectById: ==&gt; Parameters: 1480081943737569281(Long)
+c.p.f.i.i.m.m.I.selectById: &lt;==      Total: 1
+c.p.f.d.m.ModelMetaManager: dimension for identify and update is inventoryNo
+c.p.f.d.m.ModelMetaManager: multiple dimensions for identify are found ,but expect 1, please check the request。dimensions are inventoryNo,inventoryDimension,uniqueCode
+c.p.f.d.i.i.BaseInsertInstruction: duplicate dimension check, dimension: inventoryNo, parameter:{tenant_id=1, inventory_no=INVXXX}
+c.p.f.i.i.m.m.I.selectCountByMap: ==&gt;  Preparing: SELECT COUNT(*) FROM InvForTesting WHERE tenant_id = ? AND inventory_no = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectCountByMap: ==&gt; Parameters: 1(Long), INVXXX(String)
+c.p.f.i.i.m.m.I.selectCountByMap: &lt;==      Total: 1
+c.p.f.d.i.i.BaseInsertInstruction: duplicate dimension check, dimension: inventoryDimension, parameter:{tenant_id=1, container_code=C01, location_code=RECEIVE_DOCK, owner_code=owner1, sku_id=SKU2, unique_code=uniqueCode1}
+c.p.f.i.i.m.m.I.selectCountByMap: ==&gt;  Preparing: SELECT COUNT(*) FROM InvForTesting WHERE tenant_id = ? AND container_code = ? AND location_code = ? AND owner_code = ? AND sku_id = ? AND unique_code = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectCountByMap: ==&gt; Parameters: 1(Long), C01(String), RECEIVE_DOCK(String), owner1(String), SKU2(String), uniqueCode1(String)
+c.p.f.i.i.m.m.I.selectCountByMap: &lt;==      Total: 1
+c.p.f.t.TestAssert: UncheckException{exceptionCode.domain=foundation,exceptionCode.module=foundation,exceptionCode.code=12110,message=can not insert, because dimension exist, dimension : inventoryDimension, request : {tenant_id=1, container_code=C01, location_code=RECEIVE_DOCK, owner_code=owner1, sku_id=SKU2, unique_code=uniqueCode1}}
+c.p.f.d.m.ModelMetaManager: dimension for identify and update is inventoryDimension
+c.p.f.d.i.i.BaseInsertInstruction: duplicate dimension check, dimension: inventoryDimension, parameter:{tenant_id=1, container_code=C01, location_code=SH1XX, owner_code=owner1, sku_id=SKU2}
+c.p.f.i.i.m.m.I.selectCountByMap: ==&gt;  Preparing: SELECT COUNT(*) FROM InvForTesting WHERE tenant_id = ? AND container_code = ? AND location_code = ? AND owner_code = ? AND sku_id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectCountByMap: ==&gt; Parameters: 1(Long), C01(String), SH1XX(String), owner1(String), SKU2(String)
+c.p.f.i.i.m.m.I.selectCountByMap: &lt;==      Total: 1
+c.p.f.i.i.m.m.I.insert: ==&gt;  Preparing: INSERT INTO InvForTesting (id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, updated_by, revision) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+c.p.f.i.i.m.m.I.insert: ==&gt; Parameters: 1480081944270245889(Long), 2022-01-09T15:40:08.762(String), SKU2(String), C01(String), (String), owner1(String), 1(Integer), SH1XX(String), vendor1(String), CGRK(String), 1(Long), 89(Long), 89(Long), 1(Long)
+c.p.f.i.i.m.m.I.insert: &lt;==    Updates: 1
+c.p.f.i.i.m.m.I.selectById: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectById: ==&gt; Parameters: 1480081944270245889(Long)
+c.p.f.i.i.m.m.I.selectById: &lt;==      Total: 1
+c.p.f.d.m.ModelMetaManager: dimension for identify and update is inventoryDimension
+c.p.f.d.i.i.BaseInsertInstruction: duplicate dimension check, dimension: inventoryDimension, parameter:{tenant_id=1, container_code=C01, location_code=XXXXX, owner_code=owner1, sku_id=SKU2}
+c.p.f.i.i.m.m.I.selectCountByMap: ==&gt;  Preparing: SELECT COUNT(*) FROM InvForTesting WHERE tenant_id = ? AND container_code = ? AND location_code = ? AND owner_code = ? AND sku_id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectCountByMap: ==&gt; Parameters: 1(Long), C01(String), XXXXX(String), owner1(String), SKU2(String)
+c.p.f.i.i.m.m.I.selectCountByMap: &lt;==      Total: 1
+c.p.f.i.i.m.m.I.insert: ==&gt;  Preparing: INSERT INTO InvForTesting (id, inventory_no, sku_id, container_code, owner_code, on_hand_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, updated_by, revision) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+c.p.f.i.i.m.m.I.insert: ==&gt; Parameters: 1480081944408657921(Long), 2022-01-09T15:40:08.798(String), SKU2(String), C01(String), owner1(String), 1(Integer), XXXXX(String), vendor1(String), CGRK(String), 1(Long), 4(Long), 4(Long), 1(Long)
+c.p.f.d.m.ModelMetaManager: dimension for identify and update is uniqueCode
+c.p.f.t.TestAssert: UncheckException{exceptionCode.domain=foundation,exceptionCode.module=foundation,exceptionCode.code=12105,message=can not insert, please check all dimensions are present at request. request: InvForTesting(super=BaseModel(id=null, tenantId=1, createdBy=null, createdTime=null, updatedBy=21, updatedTime=null, revision=null), inventoryNo=null, skuId=null, locationCode=, containerCode=, ownerCode=ownXXX, vendorCode=null, uniqueCode=uniXXX, onHandQty=null, allocatedQty=null, inTransitQty=null, suspenseQty=null, entryOrderType=null)}
+c.p.f.d.m.ModelMetaManager: dimension for identify and update is inventoryNo
+c.p.f.d.m.ModelMetaManager: multiple dimensions for identify are found ,but expect 1, please check the request。dimensions are inventoryNo,inventoryDimension
+c.p.f.d.i.i.BaseInsertInstruction: duplicate dimension check, dimension: inventoryNo, parameter:{tenant_id=1, inventory_no=INVXXX}
+c.p.f.i.i.m.m.I.selectCountByMap: ==&gt;  Preparing: SELECT COUNT(*) FROM InvForTesting WHERE tenant_id = ? AND inventory_no = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectCountByMap: ==&gt; Parameters: 1(Long), INVXXX(String)
+c.p.f.i.i.m.m.I.selectCountByMap: &lt;==      Total: 1
+c.p.f.d.i.i.BaseInsertInstruction: duplicate dimension check, dimension: inventoryDimension, parameter:{tenant_id=1, container_code=C01, location_code=SH1XX, owner_code=owner1, sku_id=SKU2}
+c.p.f.i.i.m.m.I.selectCountByMap: ==&gt;  Preparing: SELECT COUNT(*) FROM InvForTesting WHERE tenant_id = ? AND container_code = ? AND location_code = ? AND owner_code = ? AND sku_id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectCountByMap: ==&gt; Parameters: 1(Long), C01(String), SH1XX(String), owner1(String), SKU2(String)
+c.p.f.i.i.m.m.I.selectCountByMap: &lt;==      Total: 1
+c.p.f.i.i.m.m.I.insert: ==&gt;  Preparing: INSERT INTO InvForTesting (id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, updated_by, revision) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+c.p.f.i.i.m.m.I.insert: ==&gt; Parameters: 1480081945046192129(Long), 2022-01-09T15:40:08.946(String), SKU2(String), C01(String), (String), owner1(String), 1(Integer), SH1XX(String), vendor1(String), CGRK(String), 1(Long), 89(Long), 89(Long), 1(Long)
+c.p.f.i.i.m.m.I.insert: &lt;==    Updates: 1
+c.p.f.i.i.m.m.I.selectById: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectById: ==&gt; Parameters: 1480081945046192129(Long)
+c.p.f.i.i.m.m.I.selectById: &lt;==      Total: 1
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.1</a> at 2022-1-9 15:40:11</p>
+</div>
+</div>
+</body>
+</html>

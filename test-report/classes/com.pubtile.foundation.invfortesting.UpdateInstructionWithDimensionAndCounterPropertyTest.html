@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - update测试-同时更新dimension property 和 counter value property</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>update测试-同时更新dimension property 和 counter value property</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.pubtile.foundation.invfortesting.html">com.pubtile.foundation.invfortesting</a> &gt; UpdateInstructionWithDimensionAndCounterPropertyTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">6</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.528s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">一个可定位的维度+一个更新维度和属性+拆分一个数量-&gt;成功insert和update</td>
+<td class="success">identifyByOne_updateDimensionAndNormalValueProperty_oneQty_successInsertUpdate()</td>
+<td class="success">0.129s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">一个可定位的维度+一个更新维度+拆分一个数量-&gt;成功insert和update</td>
+<td class="success">identifyByOne_updateDimension_oneQty_successInsertUpdate()</td>
+<td class="success">0.065s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">一个可定位的维度+多个个更新维度+所有数量-&gt;成功</td>
+<td class="success">identifyByOne_updateMany_allQty_success()</td>
+<td class="success">0.074s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">一个可定位的维度+一个更新维度+拆分一个数量-&gt;成功update</td>
+<td class="success">identifyByOne_updateOne_oneQty_successUpdate()</td>
+<td class="success">0.091s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">一个可定位的维度+一个更新维度和属性+拆分多个数量和属性-&gt;成功insert和update</td>
+<td class="success">identifyByOther_updateDimensionAndNormalValueProperty_multipleQty_successInsertUpdate()</td>
+<td class="success">0.098s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">一个可定位的维度+一个更新维度 + 没有数量-&gt;成功update</td>
+<td class="success">noQty_successWhole()</td>
+<td class="success">0.071s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>c.p.f.i.i.m.m.I.selectById: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectById: ==&gt; Parameters: 6(Long)
+c.p.f.i.i.m.m.I.selectById: &lt;==      Total: 1
+c.p.f.d.m.ModelMetaManager: dimension for identify and update is id
+c.p.f.i.i.m.m.I.selectByMap: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectByMap: ==&gt; Parameters: 6(Long)
+c.p.f.i.i.m.m.I.selectByMap: &lt;==      Total: 1
+c.p.f.d.i.u.BaseUpdateInstruction: 请求包含维度property变更和countable资源数量property,分别进行decrease, increase
+c.p.f.d.m.ModelMetaManager: dimension for identify and update is id
+c.p.f.i.i.m.m.I.updateById: ==&gt;  Preparing: UPDATE InvForTesting SET on_hand_qty = ?, entry_order_type = ?, updated_by = ?, revision = ? WHERE tenant_id = 1 AND id = ? AND revision = ?
+c.p.f.i.i.m.m.I.updateById: ==&gt; Parameters: 7(Integer), TypeXXX(String), 31(Long), 6(Long), 6(Long), 5(Long)
+c.p.f.i.i.m.m.I.updateById: &lt;==    Updates: 1
+c.p.f.d.m.ModelMetaManager: dimension for identify and update is inventoryDimension
+c.p.f.d.i.u.BaseUpdateInstruction: the value of field containerCode  is null and it is blank able
+c.p.f.d.i.u.BaseUpdateInstruction: the value of field uniqueCode  is null and it is blank able
+c.p.f.i.i.m.m.I.selectByMap: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE tenant_id = ? AND location_code = ? AND owner_code = ? AND sku_id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectByMap: ==&gt; Parameters: 1(Long), SH01-A-2-X(String), owner1(String), SKU1(String)
+c.p.f.i.i.m.m.I.selectByMap: &lt;==      Total: 0
+c.p.f.d.i.i.BaseIncreaseInstruction: not found by the dimension: inventoryDimension
+c.p.f.d.i.i.BaseInsertInstruction: duplicate dimension check, dimension: inventoryDimension, parameter:{tenant_id=1, location_code=SH01-A-2-X, owner_code=owner1, sku_id=SKU1}
+c.p.f.i.i.m.m.I.selectCountByMap: ==&gt;  Preparing: SELECT COUNT(*) FROM InvForTesting WHERE tenant_id = ? AND location_code = ? AND owner_code = ? AND sku_id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectCountByMap: ==&gt; Parameters: 1(Long), SH01-A-2-X(String), owner1(String), SKU1(String)
+c.p.f.i.i.m.m.I.selectCountByMap: &lt;==      Total: 1
+c.p.f.i.i.m.m.I.insert: ==&gt;  Preparing: INSERT INTO InvForTesting (id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, updated_by, revision) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+c.p.f.i.i.m.m.I.insert: ==&gt; Parameters: 1480081948825260033(Long), 2022-01-09T15:40:09.848(String), SKU1(String), (String), (String), owner1(String), 1(Integer), SH01-A-2-X(String), vendor1(String), TypeXXX(String), 1(Long), 31(Long), 31(Long), 1(Long)
+c.p.f.i.i.m.m.I.insert: &lt;==    Updates: 1
+c.p.f.i.i.m.m.I.selectById: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectById: ==&gt; Parameters: 6(Long)
+c.p.f.i.i.m.m.I.selectById: &lt;==      Total: 1
+c.p.f.i.i.m.m.I.selectById: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectById: ==&gt; Parameters: 1480081948825260033(Long)
+c.p.f.i.i.m.m.I.selectById: &lt;==      Total: 1
+c.p.f.i.i.m.m.I.selectById: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectById: ==&gt; Parameters: 2(Long)
+c.p.f.i.i.m.m.I.selectById: &lt;==      Total: 1
+c.p.f.d.m.ModelMetaManager: dimension for identify and update is id
+c.p.f.i.i.m.m.I.selectByMap: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectByMap: ==&gt; Parameters: 2(Long)
+c.p.f.i.i.m.m.I.selectByMap: &lt;==      Total: 1
+c.p.f.i.i.m.m.I.updateById: ==&gt;  Preparing: UPDATE InvForTesting SET unique_code = ?, revision = ? WHERE tenant_id = 1 AND id = ? AND revision = ?
+c.p.f.i.i.m.m.I.updateById: ==&gt; Parameters: uniqueCodeXXX(String), 6(Long), 2(Long), 5(Long)
+c.p.f.i.i.m.m.I.updateById: &lt;==    Updates: 1
+c.p.f.i.i.m.m.I.selectById: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectById: ==&gt; Parameters: 2(Long)
+c.p.f.i.i.m.m.I.selectById: &lt;==      Total: 1
+c.p.f.i.i.m.m.I.selectById: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectById: ==&gt; Parameters: 6(Integer)
+c.p.f.i.i.m.m.I.selectById: &lt;==      Total: 1
+c.p.f.i.i.m.m.I.selectById: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectById: ==&gt; Parameters: 1(Integer)
+c.p.f.i.i.m.m.I.selectById: &lt;==      Total: 1
+c.p.f.d.m.ModelMetaManager: dimension for identify and update is inventoryNo
+c.p.f.i.i.m.m.I.selectByMap: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE tenant_id = ? AND inventory_no = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectByMap: ==&gt; Parameters: 1(Long), KC2110282364978406(String)
+c.p.f.i.i.m.m.I.selectByMap: &lt;==      Total: 1
+c.p.f.d.i.u.BaseUpdateInstruction: 请求包含维度property变更和countable资源数量property,分别进行decrease, increase
+c.p.f.d.m.ModelMetaManager: dimension for identify and update is id
+c.p.f.i.i.m.m.I.selectByMap: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectByMap: ==&gt; Parameters: 6(Long)
+c.p.f.i.i.m.m.I.selectByMap: &lt;==      Total: 1
+c.p.f.i.i.m.m.I.updateById: ==&gt;  Preparing: UPDATE InvForTesting SET on_hand_qty = ?, allocated_qty = ?, entry_order_type = ?, updated_by = ?, revision = ? WHERE tenant_id = 1 AND id = ? AND revision = ?
+c.p.f.i.i.m.m.I.updateById: ==&gt; Parameters: 7(Integer), 2(Integer), TypeYYY(String), 99(Long), 6(Long), 6(Long), 5(Long)
+c.p.f.i.i.m.m.I.updateById: &lt;==    Updates: 1
+c.p.f.d.m.ModelMetaManager: dimension for identify and update is inventoryDimension
+c.p.f.d.i.u.BaseUpdateInstruction: the value of field uniqueCode  is null and it is blank able
+c.p.f.i.i.m.m.I.selectByMap: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE tenant_id = ? AND container_code = ? AND location_code = ? AND owner_code = ? AND sku_id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectByMap: ==&gt; Parameters: 1(Long), C01(String), RECEIVE_DOCK(String), owner1(String), SKU1(String)
+c.p.f.i.i.m.m.I.selectByMap: &lt;==      Total: 1
+c.p.f.i.i.m.m.I.updateById: ==&gt;  Preparing: UPDATE InvForTesting SET on_hand_qty = ?, allocated_qty = ?, entry_order_type = ?, updated_by = ?, revision = ? WHERE tenant_id = 1 AND id = ? AND revision = ?
+c.p.f.i.i.m.m.I.updateById: ==&gt; Parameters: 3(Integer), 1(Integer), TypeYYY(String), 99(Long), 4(Long), 1(Long), 3(Long)
+c.p.f.i.i.m.m.I.updateById: &lt;==    Updates: 1
+c.p.f.i.i.m.m.I.selectById: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectById: ==&gt; Parameters: 6(Integer)
+c.p.f.i.i.m.m.I.selectById: &lt;==      Total: 1
+c.p.f.i.i.m.m.I.selectById: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectById: ==&gt; Parameters: 1(Integer)
+c.p.f.i.i.m.m.I.selectById: &lt;==      Total: 1
+c.p.f.i.i.m.m.I.selectById: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectById: ==&gt; Parameters: 6(Long)
+c.p.f.i.i.m.m.I.selectById: &lt;==      Total: 1
+c.p.f.d.m.ModelMetaManager: dimension for identify and update is inventoryNo
+c.p.f.i.i.m.m.I.selectByMap: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE tenant_id = ? AND inventory_no = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectByMap: ==&gt; Parameters: 1(Long), KC2110282364978406(String)
+c.p.f.i.i.m.m.I.selectByMap: &lt;==      Total: 1
+c.p.f.d.i.u.BaseUpdateInstruction: 请求包含维度property变更和countable资源数量property,分别进行decrease, increase
+c.p.f.d.m.ModelMetaManager: dimension for identify and update is id
+c.p.f.i.i.m.m.I.selectByMap: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectByMap: ==&gt; Parameters: 6(Long)
+c.p.f.i.i.m.m.I.selectByMap: &lt;==      Total: 1
+c.p.f.i.i.m.m.I.updateById: ==&gt;  Preparing: UPDATE InvForTesting SET on_hand_qty = ?, allocated_qty = ?, entry_order_type = ?, updated_by = ?, revision = ? WHERE tenant_id = 1 AND id = ? AND revision = ?
+c.p.f.i.i.m.m.I.updateById: ==&gt; Parameters: 7(Integer), 2(Integer), TypeYYY(String), 99(Long), 6(Long), 6(Long), 5(Long)
+c.p.f.i.i.m.m.I.updateById: &lt;==    Updates: 1
+c.p.f.d.m.ModelMetaManager: dimension for identify and update is inventoryDimension
+c.p.f.d.i.u.BaseUpdateInstruction: the value of field containerCode  is null and it is blank able
+c.p.f.d.i.u.BaseUpdateInstruction: the value of field uniqueCode  is null and it is blank able
+c.p.f.i.i.m.m.I.selectByMap: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE tenant_id = ? AND location_code = ? AND owner_code = ? AND sku_id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectByMap: ==&gt; Parameters: 1(Long), SH01-A-3-X(String), owner1(String), SKU1(String)
+c.p.f.i.i.m.m.I.selectByMap: &lt;==      Total: 0
+c.p.f.d.i.i.BaseIncreaseInstruction: not found by the dimension: inventoryDimension
+c.p.f.d.i.i.BaseInsertInstruction: duplicate dimension check, dimension: inventoryDimension, parameter:{tenant_id=1, location_code=SH01-A-3-X, owner_code=owner1, sku_id=SKU1}
+c.p.f.i.i.m.m.I.selectCountByMap: ==&gt;  Preparing: SELECT COUNT(*) FROM InvForTesting WHERE tenant_id = ? AND location_code = ? AND owner_code = ? AND sku_id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectCountByMap: ==&gt; Parameters: 1(Long), SH01-A-3-X(String), owner1(String), SKU1(String)
+c.p.f.i.i.m.m.I.selectCountByMap: &lt;==      Total: 1
+c.p.f.i.i.m.m.I.insert: ==&gt;  Preparing: INSERT INTO InvForTesting (id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, updated_by, revision) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+c.p.f.i.i.m.m.I.insert: ==&gt; Parameters: 1480081949798338561(Long), 2022-01-09T15:40:10.080(String), SKU1(String), (String), (String), owner1(String), 1(Integer), 1(Integer), SH01-A-3-X(String), vendor1(String), TypeYYY(String), 1(Long), 99(Long), 99(Long), 1(Long)
+c.p.f.i.i.m.m.I.insert: &lt;==    Updates: 1
+c.p.f.i.i.m.m.I.selectById: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectById: ==&gt; Parameters: 6(Long)
+c.p.f.i.i.m.m.I.selectById: &lt;==      Total: 1
+c.p.f.i.i.m.m.I.selectById: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectById: ==&gt; Parameters: 1480081949798338561(Long)
+c.p.f.i.i.m.m.I.selectById: &lt;==      Total: 1
+c.p.f.i.i.m.m.I.selectById: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectById: ==&gt; Parameters: 6(Long)
+c.p.f.i.i.m.m.I.selectById: &lt;==      Total: 1
+c.p.f.i.i.m.m.I.selectById: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectById: ==&gt; Parameters: 10(Integer)
+c.p.f.i.i.m.m.I.selectById: &lt;==      Total: 1
+c.p.f.d.m.ModelMetaManager: dimension for identify and update is inventoryNo
+c.p.f.i.i.m.m.I.selectByMap: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE tenant_id = ? AND inventory_no = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectByMap: ==&gt; Parameters: 1(Long), KC2110282364978406(String)
+c.p.f.i.i.m.m.I.selectByMap: &lt;==      Total: 1
+c.p.f.d.i.u.BaseUpdateInstruction: 请求包含维度property变更和countable资源数量property,分别进行decrease, increase
+c.p.f.d.m.ModelMetaManager: dimension for identify and update is id
+c.p.f.i.i.m.m.I.selectByMap: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectByMap: ==&gt; Parameters: 6(Long)
+c.p.f.i.i.m.m.I.selectByMap: &lt;==      Total: 1
+c.p.f.i.i.m.m.I.updateById: ==&gt;  Preparing: UPDATE InvForTesting SET on_hand_qty = ?, allocated_qty = ?, entry_order_type = ?, updated_by = ?, revision = ? WHERE tenant_id = 1 AND id = ? AND revision = ?
+c.p.f.i.i.m.m.I.updateById: ==&gt; Parameters: 7(Integer), 2(Integer), TypeYYY(String), 99(Long), 6(Long), 6(Long), 5(Long)
+c.p.f.i.i.m.m.I.updateById: &lt;==    Updates: 1
+c.p.f.d.m.ModelMetaManager: dimension for identify and update is inventoryDimension
+c.p.f.d.i.u.BaseUpdateInstruction: the value of field containerCode  is null and it is blank able
+c.p.f.d.i.u.BaseUpdateInstruction: the value of field uniqueCode  is null and it is blank able
+c.p.f.i.i.m.m.I.selectByMap: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE tenant_id = ? AND location_code = ? AND owner_code = ? AND sku_id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectByMap: ==&gt; Parameters: 1(Long), SH01-A-1-2(String), owner1(String), SKU1(String)
+c.p.f.i.i.m.m.I.selectByMap: &lt;==      Total: 1
+c.p.f.i.i.m.m.I.updateById: ==&gt;  Preparing: UPDATE InvForTesting SET on_hand_qty = ?, allocated_qty = ?, entry_order_type = ?, updated_by = ?, revision = ? WHERE tenant_id = 1 AND id = ? AND revision = ?
+c.p.f.i.i.m.m.I.updateById: ==&gt; Parameters: 6(Integer), 1(Integer), TypeYYY(String), 99(Long), 6(Long), 10(Long), 5(Long)
+c.p.f.i.i.m.m.I.updateById: &lt;==    Updates: 1
+c.p.f.i.i.m.m.I.selectById: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectById: ==&gt; Parameters: 6(Long)
+c.p.f.i.i.m.m.I.selectById: &lt;==      Total: 1
+c.p.f.i.i.m.m.I.selectById: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectById: ==&gt; Parameters: 10(Integer)
+c.p.f.i.i.m.m.I.selectById: &lt;==      Total: 1
+c.p.f.i.i.m.m.I.selectById: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectById: ==&gt; Parameters: 6(Long)
+c.p.f.i.i.m.m.I.selectById: &lt;==      Total: 1
+c.p.f.d.m.ModelMetaManager: dimension for identify and update is id
+c.p.f.i.i.m.m.I.selectByMap: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectByMap: ==&gt; Parameters: 6(Long)
+c.p.f.i.i.m.m.I.selectByMap: &lt;==      Total: 1
+c.p.f.d.i.u.BaseUpdateInstruction: 请求包含维度property变更和countable资源数量property,分别进行decrease, increase
+c.p.f.d.m.ModelMetaManager: dimension for identify and update is id
+c.p.f.i.i.m.m.I.updateById: ==&gt;  Preparing: UPDATE InvForTesting SET on_hand_qty = ?, updated_by = ?, revision = ? WHERE tenant_id = 1 AND id = ? AND revision = ?
+c.p.f.i.i.m.m.I.updateById: ==&gt; Parameters: 7(Integer), 44(Long), 6(Long), 6(Long), 5(Long)
+c.p.f.i.i.m.m.I.updateById: &lt;==    Updates: 1
+c.p.f.d.m.ModelMetaManager: dimension for identify and update is inventoryDimension
+c.p.f.d.i.u.BaseUpdateInstruction: the value of field containerCode  is null and it is blank able
+c.p.f.d.i.u.BaseUpdateInstruction: the value of field uniqueCode  is null and it is blank able
+c.p.f.i.i.m.m.I.selectByMap: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE tenant_id = ? AND location_code = ? AND owner_code = ? AND sku_id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectByMap: ==&gt; Parameters: 1(Long), SH01-A-1-X(String), owner1(String), SKU1(String)
+c.p.f.i.i.m.m.I.selectByMap: &lt;==      Total: 0
+c.p.f.d.i.i.BaseIncreaseInstruction: not found by the dimension: inventoryDimension
+c.p.f.d.i.i.BaseInsertInstruction: duplicate dimension check, dimension: inventoryDimension, parameter:{tenant_id=1, location_code=SH01-A-1-X, owner_code=owner1, sku_id=SKU1}
+c.p.f.i.i.m.m.I.selectCountByMap: ==&gt;  Preparing: SELECT COUNT(*) FROM InvForTesting WHERE tenant_id = ? AND location_code = ? AND owner_code = ? AND sku_id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectCountByMap: ==&gt; Parameters: 1(Long), SH01-A-1-X(String), owner1(String), SKU1(String)
+c.p.f.i.i.m.m.I.selectCountByMap: &lt;==      Total: 1
+c.p.f.i.i.m.m.I.insert: ==&gt;  Preparing: INSERT INTO InvForTesting (id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, updated_by, revision) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+c.p.f.i.i.m.m.I.insert: ==&gt; Parameters: 1480081950549118977(Long), 2022-01-09T15:40:10.260(String), SKU1(String), (String), (String), owner1(String), 1(Integer), SH01-A-1-X(String), vendor1(String), CGRK(String), 1(Long), 44(Long), 44(Long), 1(Long)
+c.p.f.i.i.m.m.I.insert: &lt;==    Updates: 1
+c.p.f.i.i.m.m.I.selectById: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectById: ==&gt; Parameters: 6(Long)
+c.p.f.i.i.m.m.I.selectById: &lt;==      Total: 1
+c.p.f.i.i.m.m.I.selectById: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectById: ==&gt; Parameters: 1480081950549118977(Long)
+c.p.f.i.i.m.m.I.selectById: &lt;==      Total: 1
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.1</a> at 2022-1-9 15:40:11</p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - update测试-不同时更新dimension property 和 counter value property</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>update测试-不同时更新dimension property 和 counter value property</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.pubtile.foundation.invfortesting.html">com.pubtile.foundation.invfortesting</a> &gt; UpdateInstructionTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">13</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.378s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">update 重复维度 失败</td>
+<td class="success">updateByDimensionDuplicatedFields_fail()</td>
+<td class="success">0.014s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">update-通过id更新维度和非counter属性-成功</td>
+<td class="success">updateByDto_updateSuccess()</td>
+<td class="success">0.071s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">update 通过id更新value property</td>
+<td class="success">updateById_updateSuccess()</td>
+<td class="success">0.028s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">update-通过其他高优先级维度更新其他维度和非counter属性-成功</td>
+<td class="success">updateByInventoryNo_updateSuccess()</td>
+<td class="success">0.030s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">update-支持map-成功</td>
+<td class="success">updateByMap_updateSuccess()</td>
+<td class="success">0.050s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">update 指定高优先级维度</td>
+<td class="success">updateSpecifyIdentfyDimension()</td>
+<td class="success">0.022s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">update 没有更新字段，不更新</td>
+<td class="success">updateWithoutUpdateField_fail()</td>
+<td class="success">0.014s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">update 不可变的不可更新 失败</td>
+<td class="success">update_ImmutableField_Fail()</td>
+<td class="success">0.012s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">update 请求中属性为“” 不更新该属性</td>
+<td class="success">update_RequestFieldWithEmptyString_NotUpdate()</td>
+<td class="success">0.032s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">update 请求中属性为Null 不更新该属性</td>
+<td class="success">update_RequestFieldWithNullValue_NotUpdate()</td>
+<td class="success">0.024s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">update 请求中属性为0L 不更新该属性</td>
+<td class="success">update_RequestFieldWithZero_NotUpdate()</td>
+<td class="success">0.047s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">update 没有更新字段2，不更新</td>
+<td class="success">update_UPDATE_WITHOUT_UPDATE_PROPERTY_fail()</td>
+<td class="success">0.023s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">update 缺失定位维度 失败</td>
+<td class="success">update_WITHOUT_DIMENSION_FOR_IDENTIFY_fail()</td>
+<td class="success">0.011s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>c.p.f.i.i.m.m.I.selectOne: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE (inventory_no = ? AND tenant_id = ?) AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectOne: ==&gt; Parameters: KC2110282364978404(String), 1(Long)
+c.p.f.i.i.m.m.I.selectOne: &lt;==      Total: 1
+c.p.f.d.m.ModelMetaManager: dimension for identify and update is inventoryNo
+c.p.f.i.i.m.m.I.selectByMap: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE tenant_id = ? AND inventory_no = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectByMap: ==&gt; Parameters: 1(Long), KC2110282364978404(String)
+c.p.f.i.i.m.m.I.selectByMap: &lt;==      Total: 1
+c.p.f.i.i.m.m.I.updateById: ==&gt;  Preparing: UPDATE InvForTesting SET container_code = ?, vendor_code = ?, entry_order_type = ?, updated_by = ?, revision = ? WHERE tenant_id = 1 AND id = ? AND revision = ?
+c.p.f.i.i.m.m.I.updateById: ==&gt; Parameters: CXXX(String), ttt(String), ot(String), 5(Long), 6(Long), 4(Long), 5(Long)
+c.p.f.i.i.m.m.I.updateById: &lt;==    Updates: 1
+c.p.f.i.i.m.m.I.selectById: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectById: ==&gt; Parameters: 4(Long)
+c.p.f.i.i.m.m.I.selectById: &lt;==      Total: 1
+c.p.f.i.i.m.m.I.selectList: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE (id = ?) AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectList: ==&gt; Parameters: 2(Long)
+c.p.f.i.i.m.m.I.selectList: &lt;==      Total: 1
+c.p.f.d.m.ModelMetaManager: dimension for identify and update is id
+c.p.f.d.m.ModelMetaManager: multiple dimensions for identify are found ,but expect 1, please check the request。dimensions are id,inventoryDimension,uniqueCode,inventoryNo
+c.p.f.i.i.m.m.I.selectByMap: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectByMap: ==&gt; Parameters: 2(Long)
+c.p.f.i.i.m.m.I.selectByMap: &lt;==      Total: 1
+c.p.f.i.i.m.m.I.updateById: ==&gt;  Preparing: UPDATE InvForTesting SET container_code = ?, vendor_code = ?, updated_by = ?, revision = ? WHERE tenant_id = 1 AND id = ? AND revision = ?
+c.p.f.i.i.m.m.I.updateById: ==&gt; Parameters: CXXX(String), ttt(String), 5(Long), 6(Long), 2(Long), 5(Long)
+c.p.f.i.i.m.m.I.updateById: &lt;==    Updates: 1
+c.p.f.i.i.m.m.I.selectList: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE (id = ?) AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectList: ==&gt; Parameters: 2(Long)
+c.p.f.i.i.m.m.I.selectList: &lt;==      Total: 1
+c.p.f.d.m.ModelMetaManager: dimension for identify and update is id
+c.p.f.i.i.m.m.I.selectByMap: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectByMap: ==&gt; Parameters: 1(Long)
+c.p.f.i.i.m.m.I.selectByMap: &lt;==      Total: 1
+c.p.f.i.i.m.m.I.updateById: ==&gt;  Preparing: UPDATE InvForTesting SET on_hand_qty = ?, suspense_qty = ?, updated_by = ?, revision = ? WHERE tenant_id = 1 AND id = ? AND revision = ?
+c.p.f.i.i.m.m.I.updateById: ==&gt; Parameters: 100(Integer), 20(Integer), 5(Long), 4(Long), 1(Long), 3(Long)
+c.p.f.i.i.m.m.I.updateById: &lt;==    Updates: 1
+c.p.f.i.i.m.m.I.selectList: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE (id = ?) AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectList: ==&gt; Parameters: 1(Long)
+c.p.f.i.i.m.m.I.selectList: &lt;==      Total: 1
+c.p.f.i.i.m.m.I.selectList: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE (id = ?) AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectList: ==&gt; Parameters: 2(Long)
+c.p.f.i.i.m.m.I.selectList: &lt;==      Total: 1
+c.p.f.d.m.ModelMetaManager: dimension for identify and update is id
+c.p.f.i.i.m.m.I.selectByMap: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectByMap: ==&gt; Parameters: 2(Long)
+c.p.f.i.i.m.m.I.selectByMap: &lt;==      Total: 1
+c.p.f.i.i.m.m.I.updateById: ==&gt;  Preparing: UPDATE InvForTesting SET on_hand_qty = ?, suspense_qty = ?, updated_by = ?, revision = ? WHERE tenant_id = 1 AND id = ? AND revision = ?
+c.p.f.i.i.m.m.I.updateById: ==&gt; Parameters: 100(Integer), 20(Integer), 5(Long), 6(Long), 2(Long), 5(Long)
+c.p.f.i.i.m.m.I.updateById: &lt;==    Updates: 1
+c.p.f.i.i.m.m.I.selectList: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE (id = ?) AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectList: ==&gt; Parameters: 2(Long)
+c.p.f.i.i.m.m.I.selectList: &lt;==      Total: 1
+c.p.f.d.m.ModelMetaManager: dimension for identify and update is uniqueCode
+c.p.f.d.m.ModelMetaManager: multiple dimensions for identify are found ,but expect 1, please check the request。dimensions are uniqueCode,inventoryNo
+c.p.f.i.i.m.m.I.selectByMap: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE tenant_id = ? AND unique_code = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectByMap: ==&gt; Parameters: 1(Long), uniqueCode1(String)
+c.p.f.i.i.m.m.I.selectByMap: &lt;==      Total: 1
+c.p.f.i.i.m.m.I.updateById: ==&gt;  Preparing: UPDATE InvForTesting SET inventory_no = ?, revision = ? WHERE tenant_id = 1 AND id = ? AND revision = ?
+c.p.f.i.i.m.m.I.updateById: ==&gt; Parameters: KC2110282364978XXX(String), 6(Long), 2(Long), 5(Long)
+c.p.f.i.i.m.m.I.updateById: &lt;==    Updates: 1
+c.p.f.i.i.m.m.I.selectOne: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE (inventory_no = ?) AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectOne: ==&gt; Parameters: KC2110282364978XXX(String)
+c.p.f.i.i.m.m.I.selectOne: &lt;==      Total: 1
+c.p.f.d.m.ModelMetaManager: dimension for identify and update is id
+c.p.f.i.i.m.m.I.selectByMap: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectByMap: ==&gt; Parameters: 1(Long)
+c.p.f.i.i.m.m.I.selectByMap: &lt;==      Total: 1
+c.p.f.t.TestAssert: UncheckException{exceptionCode.domain=foundation,exceptionCode.module=foundation,exceptionCode.code=12210,message=can not update, because there is no update property， request: InvForTesting(super=BaseModel(id=1, tenantId=0, createdBy=null, createdTime=null, updatedBy=null, updatedTime=null, revision=null), inventoryNo=null, skuId=null, locationCode=, containerCode=, ownerCode=null, vendorCode=null, uniqueCode=null, onHandQty=null, allocatedQty=null, inTransitQty=null, suspenseQty=null, entryOrderType=null).}
+c.p.f.d.m.ModelMetaManager: dimension for identify and update is id
+c.p.f.i.i.m.m.I.selectByMap: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectByMap: ==&gt; Parameters: 2(Long)
+c.p.f.i.i.m.m.I.selectByMap: &lt;==      Total: 1
+c.p.f.t.TestAssert: UncheckException{exceptionCode.domain=foundation,exceptionCode.module=foundation,exceptionCode.code=12215,message=update immutable property is not allowed, property :ownerCode ,request : InvForTesting(super=BaseModel(id=2, tenantId=0, createdBy=null, createdTime=null, updatedBy=null, updatedTime=null, revision=null), inventoryNo=null, skuId=skuXXX, locationCode=, containerCode=, ownerCode=OwnerXXX, vendorCode=null, uniqueCode=null, onHandQty=null, allocatedQty=null, inTransitQty=null, suspenseQty=null, entryOrderType=null).}
+c.p.f.i.UpdateInstructionTest: update immutable property is not allowed, property :ownerCode ,request : InvForTesting(super=BaseModel(id=2, tenantId=0, createdBy=null, createdTime=null, updatedBy=null, updatedTime=null, revision=null), inventoryNo=null, skuId=skuXXX, locationCode=, containerCode=, ownerCode=OwnerXXX, vendorCode=null, uniqueCode=null, onHandQty=null, allocatedQty=null, inTransitQty=null, suspenseQty=null, entryOrderType=null).
+c.p.f.d.m.ModelMetaManager: dimension for identify and update is uniqueCode
+c.p.f.d.m.ModelMetaManager: multiple dimensions for identify are found ,but expect 1, please check the request。dimensions are uniqueCode,inventoryDimension
+c.p.f.i.i.m.m.I.selectByMap: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE tenant_id = ? AND unique_code = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectByMap: ==&gt; Parameters: 1(Long), uniqueCodeD(String)
+c.p.f.i.i.m.m.I.selectByMap: &lt;==      Total: 2
+c.p.f.t.TestAssert: UncheckException{exceptionCode.domain=foundation,exceptionCode.module=foundation,exceptionCode.code=12050,message=the query count for Dimension is more than one, Dimension :uniqueCode, count:2,request: {tenant_id=1, unique_code=uniqueCodeD}}
+c.p.f.t.TestAssert: UncheckException{exceptionCode.domain=foundation,exceptionCode.module=foundation,exceptionCode.code=12205,message=dimension was not found, please check the request, request: InvForTesting(super=BaseModel(id=null, tenantId=1, createdBy=null, createdTime=null, updatedBy=null, updatedTime=null, revision=null), inventoryNo=null, skuId=null, locationCode=XXX, containerCode=, ownerCode=null, vendorCode=null, uniqueCode=null, onHandQty=1, allocatedQty=null, inTransitQty=null, suspenseQty=null, entryOrderType=null).}
+c.p.f.d.m.ModelMetaManager: dimension for identify and update is id
+c.p.f.i.i.m.m.I.selectByMap: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectByMap: ==&gt; Parameters: 1(Long)
+c.p.f.i.i.m.m.I.selectByMap: &lt;==      Total: 1
+c.p.f.i.i.m.m.I.updateById: ==&gt;  Preparing: UPDATE InvForTesting SET sku_id = ?, revision = ? WHERE tenant_id = 1 AND id = ? AND revision = ?
+c.p.f.i.i.m.m.I.updateById: ==&gt; Parameters: skuXX(String), 4(Long), 1(Long), 3(Long)
+c.p.f.i.i.m.m.I.updateById: &lt;==    Updates: 1
+c.p.f.i.i.m.m.I.selectById: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectById: ==&gt; Parameters: 1(Long)
+c.p.f.i.i.m.m.I.selectById: &lt;==      Total: 1
+c.p.f.d.m.ModelMetaManager: dimension for identify and update is id
+c.p.f.i.i.m.m.I.selectByMap: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectByMap: ==&gt; Parameters: 1(Long)
+c.p.f.i.i.m.m.I.selectByMap: &lt;==      Total: 1
+c.p.f.i.i.m.m.I.updateById: ==&gt;  Preparing: UPDATE InvForTesting SET sku_id = ?, revision = ? WHERE tenant_id = 1 AND id = ? AND revision = ?
+c.p.f.i.i.m.m.I.updateById: ==&gt; Parameters: skuXX(String), 4(Long), 1(Long), 3(Long)
+c.p.f.i.i.m.m.I.updateById: &lt;==    Updates: 1
+c.p.f.i.i.m.m.I.selectById: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectById: ==&gt; Parameters: 1(Long)
+c.p.f.i.i.m.m.I.selectById: &lt;==      Total: 1
+c.p.f.d.m.ModelMetaManager: dimension for identify and update is id
+c.p.f.i.i.m.m.I.selectByMap: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectByMap: ==&gt; Parameters: 1(Long)
+c.p.f.i.i.m.m.I.selectByMap: &lt;==      Total: 1
+c.p.f.i.i.m.m.I.updateById: ==&gt;  Preparing: UPDATE InvForTesting SET location_code = ?, updated_by = ?, revision = ? WHERE tenant_id = 1 AND id = ? AND revision = ?
+c.p.f.i.i.m.m.I.updateById: ==&gt; Parameters: SH01-XXXX(String), 9(Long), 4(Long), 1(Long), 3(Long)
+c.p.f.i.i.m.m.I.updateById: &lt;==    Updates: 1
+c.p.f.i.i.m.m.I.selectById: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE id = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectById: ==&gt; Parameters: 1(Long)
+c.p.f.i.i.m.m.I.selectById: &lt;==      Total: 1
+c.p.f.d.m.ModelMetaManager: dimension for identify and update is inventoryNo
+c.p.f.i.i.m.m.I.selectByMap: ==&gt;  Preparing: SELECT id, inventory_no, sku_id, container_code, unique_code, owner_code, on_hand_qty, allocated_qty, in_transit_qty, suspense_qty, location_code, vendor_code, entry_order_type, tenant_id, created_by, created_time, updated_by, updated_time, revision FROM InvForTesting WHERE tenant_id = ? AND inventory_no = ? AND tenant_id = 1
+c.p.f.i.i.m.m.I.selectByMap: ==&gt; Parameters: 1(Long), KC2110282364978404(String)
+c.p.f.i.i.m.m.I.selectByMap: &lt;==      Total: 1
+c.p.f.t.TestAssert: UncheckException{exceptionCode.domain=foundation,exceptionCode.module=foundation,exceptionCode.code=12210,message=can not update, because there is no update property， request: InvForTesting(super=BaseModel(id=null, tenantId=1, createdBy=null, createdTime=null, updatedBy=null, updatedTime=null, revision=null), inventoryNo=KC2110282364978404, skuId=null, locationCode=, containerCode=, ownerCode=null, vendorCode=null, uniqueCode=null, onHandQty=null, allocatedQty=null, inTransitQty=null, suspenseQty=null, entryOrderType=null).}
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.1</a> at 2022-1-9 15:40:11</p>
+</div>
+</div>
+</body>
+</html>
