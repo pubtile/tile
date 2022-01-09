@@ -220,9 +220,23 @@ public abstract class BaseModel<M extends Model, P extends BasePo<P>> implements
 | 12   | A03          | 5         |
 | 92   | A01          | 3         |
 
-
-
-### 核心价值
-
 从上面这个例子里，就提现了该框架的核心价值。这么复杂的业务处理，你只需要传入适当的参数，然后调用适当的instruction。就完成了。
+
+回到 我们的需求要提供增加库存、减少库存、库存移动和库存属性调整这4个API。
+
++ 增加库存
+
+  直接调用instructionIncrease来完成。唯一要而外要做的就是保证数量是正数
+
++ 减少库存
+
+  直接调用instructionIncrease来完成。唯一要而外要做的就是在之前把数量取反。 把减少库存3件-》instructionIncrease(-3);
+
++ 库存属性调整
+
+  库存属性调用instructionUpdate来完成
+
++ 库存移动
+
+  库存移动也是调用instructionUpdate来完成，只是请求包含的维度只能包含locationCode和ContainerCode这两个可更新维度属性
 
